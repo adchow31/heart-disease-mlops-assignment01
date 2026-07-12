@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: heart-disease-api-service
+  namespace: mlops-assignment
+  labels:
+    app: heart-disease-api
+spec:
+  type: LoadBalancer
+  selector:
+    app: heart-disease-api
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000
+      # For Minikube, `minikube service heart-disease-api-service -n mlops-assignment`
+      # will open this automatically even without a real cloud load balancer.
+      # For Docker Desktop Kubernetes, LoadBalancer services resolve to localhost.

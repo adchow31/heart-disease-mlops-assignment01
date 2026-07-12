@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+
+# MLflow (keep mlflow.db itself, ignore its auto-generated artifact store)
+mlartifacts/
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
